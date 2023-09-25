@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="25dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PEMESANAN TIKET KERETA API"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spin_jenisTiket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/tanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PILIH TANGGAL"
+        android:layout_below="@id/spin_jenisTiket"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center">
+    </TextView>
+
+    <DatePicker
+        android:id="@+id/date_pick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tanggal"
+        android:layout_marginTop="10dp"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:layout_centerHorizontal="true">
+    </DatePicker>
+
+    <TextView
+        android:id="@+id/waktu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PILIH WAKTU"
+        android:layout_below="@id/date_pick"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center">
+    </TextView>
+
+    <TimePicker
+        android:id="@+id/time_pick"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/waktu"
+        android:timePickerMode="spinner">
+    </TimePicker>
+
+    <Button
+        android:id="@+id/tombol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PESAN"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/time_pick"
+        android:layout_marginTop="50dp">
+    </Button>
+
+</RelativeLayout>
